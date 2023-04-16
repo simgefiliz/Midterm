@@ -1,7 +1,7 @@
 ---
-title: "Title"
+title: "Determinants of Exportation Types"
 author: 
-  - Last Name, First Name[^1]
+  - Filiz, Simge[^1]
 bibliography: ../bibliography/biblio.bib
 csl: ../csl/apa.csl
 header-includes:
@@ -32,7 +32,7 @@ knitr::opts_chunk$set(cache = FALSE, echo = TRUE, message = FALSE, warning = FAL
 <!-- ======================================================================= -->
 <!-- ============================== FOOTNOTES ============================== -->
 <!-- ======================================================================= -->
-[^1]: Student ID, [Github Repo](https://github.com/YOUR_USER_NAME_HERE/YOUR_REPO_NAME_HERE)
+[^1]: 20080483, [Github Repo](https://github.com/simgefiliz/Midterm.git)
 
 # Important Information About Midterm
 
@@ -45,23 +45,41 @@ knitr::opts_chunk$set(cache = FALSE, echo = TRUE, message = FALSE, warning = FAL
 \colorbox{WildStrawberry}{Read the README.md file in the project folder for more information.}
 
 # Introduction
-This outline has been created to assist you in writing your project assignment. You should cite all the sources you use, articles, presentations, projects, etc. Quoting and referencing gives readers the opportunity to access the resources you refer. **Even though you use your own words, if you are conveying the ideas of others in your work, you have to document the source of these ideas. Otherwise, you are committing academic plagiarism.** For example, you can refer to @aydinonat:2007 for academic writing rules. You can find lots of online resources on this topic.
 
-The sections in your project assignment must necessarily include the sections in this text (except the first section, of course). Apart from the sections used here, you can use different subsections. When writing your project, use this file as a draft and adapt its content to your purposes.
-
-In this section, mention the purpose and importance of your work in a few paragraphs.
-
+For years, exports of countries have diversified related to many factors such as their level of development. This study aims to conduct an analysis regarding the question that what kind of determinants affect the type and size of the goods that are exported. As an essential source, the data set with 59 observations is obtained from World Trade Organization and the variables were determined as including 1? different categories like product groups of each country and years between 1990 and 2016. In the view of such database, 4 articles are examined and illustrative results towards that relationship has been demonstrated in the following part. 
+ins
 ## Literature Review
 
-In this section, discuss the articles you have read on the subject by giving references. This is a narrative citation @chang:2013. This one is a parenthetical citation [@chang:2013]. **Do not summarize each article individually under a separate title.** In the literature review section, **at least four** articles must be cited [@newbold:2003; @verzani:2014; @wickham:2014; @wooldridge:2015a].
+One of the subgroups of globalization called exportation has gradual types of diffusion all around the world. The reasons for that distinction of goods’ qualities and values are the main purpose of our analysis and the answer for the research question. When we try to detail them through the articles and graphics that will be mentioned, it could be seen that there are several prominent factors such as the growth rate of a country. Their effects create specific markets for every region on the process of exportation. 
+To make clear these effects we will view the articles in a way of coming closer which ends with a Turkey example. Our first article gives us an example about the basic positive relationship between the productivity and the export variety. In figure 7, Japan has %50 more export variety than South Korea [@Feenstra, @Kee: 2004]. However, with the narrowing gap in productivity among them, the variety of Korea’s exportation starts to rise. When we look at our second article, the variety, or new products of a country is not taken into consideration as a main trigger for the export grown [@Zahler, 2007]. Instead, a connection between new destinations for actual products and exportation growth has been created in the Table 1. From another research, we can deduce that agricultural safety standards of countries play an important role on determination of exports. For that, 4 main output structure are visualized in a bar chart by using the data collected from the countries that have 3 different kinds of socioeconomic status. These output structures of agriculture, processed foods, manufacturing and other goods exist in industrial, low-income and middle-income countries. According to that “Agriculture represents less than 2 percent of output for industrial countries and 10.5 percent for developing countries, while processed foods represent 4.5 percent for industrial countries and 7.5 percent for developing countries. Agriculture is still a relatively high 19 percent of output in the low-income developing countries.” [@Aksoy, @Beghin, 2005]. Those ratios are explained with a dependency of countries to food safety. While low-income countries’ importation is built on protected goods such as grains, their exportation has a tendency for less or no protected items. The last article offers another connection which argues that sectoral analysis of a country’s exportation is suggestive to decide whether it is an industrial society or not. With the scale of Turkey, manufacturing industry forms the biggest part of that global trade between the years of 2000 and 2015 in the graph 2 [@Yenisu, 2018]. That industry includes automotive, textile and ready-made clothing sectors and it can be easily said that Turkey is still an industrializing country even though mining and fuels exports has increased about 13.3 times. Eventually, this cause-and-effect relationship will be valid for the other countries.
+In this case, the determinants like new destinations, food safety issue and economic growth of a country can be counted as forceful factors for the heterogeneity of goods that exported. Regarding these factors, similarities between groups of countries in each status has been revealed through our data set.
+
+
+```{r}
+library(tidyverse)
+```
 
 
 
-**References section is created automatically by Rmarkdown. There is no need to change the references section in the draft file.**
+```{r}
+WtoData
 
-**_You shouldn't delete the last 3 lines. Those lines are required for References section._**
+pivot_wider(WtoData,
+            names_from = Merchandise,
+            values_from =...3)
+
+pivot_longer(WtoData,
+             c(`1990`,`2016`),
+             names_to = "year",
+             values_to = "numbers")
+```
+
+
 
 \newpage
 # References {#references}
 <div id="refs"></div>
+
+
+
 

@@ -1,0 +1,150 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+%
+\documentclass[
+  12pt,
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newlength{\cslentryspacingunit} % times entry-spacing
+\setlength{\cslentryspacingunit}{\parskip}
+\newenvironment{CSLReferences}[2] % #1 hanging-ident, #2 entry spacing
+ {% don't indent paragraphs
+  \setlength{\parindent}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1
+  \let\oldpar\par
+  \def\par{\hangindent=\cslhangindent\oldpar}
+  \fi
+  % set entry spacing
+  \setlength{\parskip}{#2\cslentryspacingunit}
+ }%
+ {}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{#1\hfill\break}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}\break}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+\usepackage{polyglossia}
+\setmainlanguage{english}
+\usepackage{booktabs}
+\usepackage{caption}
+\captionsetup[table]{skip=10pt}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={Determinants of Exportation Types},
+  pdfauthor={Filiz, Simge},
+  colorlinks=true,
+  linkcolor={Maroon},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={blue},
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Determinants of Exportation Types}
+\author{Filiz, Simge\footnote{20080483, \href{https://github.com/simgefiliz/Midterm.git}{Github Repo}}}
+\date{}
+
+\begin{document}
+\maketitle
+
+\hypertarget{important-information-about-midterm}{%
+\section{Important Information About Midterm}\label{important-information-about-midterm}}
+
+\colorbox{BurntOrange}{WRITE YOUR GITHUB REPO LINK ON LINE 35 IN THIS FILE!}
+
+\textbf{Project Proposal submisson will be done by uploading a zip file to the ekampus system along with the Github repo link. If you do not upload a zip file to the system and do not provide a Github repo link, you will be deemed not to have entered the midterm and final exams.}
+
+\textbf{You must upload your project folder (\texttt{YourStudentID.zip} file) to \emph{ekampus.ankara.edu.tr} until 16 April 2023, 23:59.}
+
+\colorbox{WildStrawberry}{Read the README.md file in the project folder for more information.}
+
+\hypertarget{introduction}{%
+\section{Introduction}\label{introduction}}
+
+For years, exports of countries have diversified related to many factors such as their level of development. This study aims to conduct an analysis regarding the question that what kind of determinants affect the type and size of the goods that are exported. As an essential source, the data set with 59 observations is obtained from World Trade Organization and the variables were determined as including 1? different categories like product groups of each country and years between 1990 and 2016. In the view of such database, 4 articles are examined and illustrative results towards that relationship has been demonstrated in the following part.
+ins
+\#\# Literature Review
+
+One of the subgroups of globalization called exportation has gradual types of diffusion all around the world. The reasons for that distinction of goods' qualities and values are the main purpose of our analysis and the answer for the research question. When we try to detail them through the articles and graphics that will be mentioned, it could be seen that there are several prominent factors such as the growth rate of a country. Their effects create specific markets for every region on the process of exportation.
+To make clear these effects we will view the articles in a way of coming closer which ends with a Turkey example. Our first article gives us an example about the basic positive relationship between the productivity and the export variety. In figure 7, Japan has \%50 more export variety than South Korea (\protect\hyperlink{ref-Kee}{\textbf{Kee?}}). However, with the narrowing gap in productivity among them, the variety of Korea's exportation starts to rise. When we look at our second article, the variety, or new products of a country is not taken into consideration as a main trigger for the export grown (\protect\hyperlink{ref-Zahler}{\textbf{Zahler?}}). Instead, a connection between new destinations for actual products and exportation growth has been created in the Table 1. From another research, we can deduce that agricultural safety standards of countries play an important role on determination of exports. For that, 4 main output structure are visualized in a bar chart by using the data collected from the countries that have 3 different kinds of socioeconomic status. These output structures of agriculture, processed foods, manufacturing and other goods exist in industrial, low-income and middle-income countries. According to that ``Agriculture represents less than 2 percent of output for industrial countries and 10.5 percent for developing countries, while processed foods represent 4.5 percent for industrial countries and 7.5 percent for developing countries. Agriculture is still a relatively high 19 percent of output in the low-income developing countries.'' (\protect\hyperlink{ref-Beghin}{\textbf{Beghin?}}). Those ratios are explained with a dependency of countries to food safety. While low-income countries' importation is built on protected goods such as grains, their exportation has a tendency for less or no protected items. The last article offers another connection which argues that sectoral analysis of a country's exportation is suggestive to decide whether it is an industrial society or not. With the scale of Turkey, manufacturing industry forms the biggest part of that global trade between the years of 2000 and 2015 in the graph 2 (\protect\hyperlink{ref-Yenisu}{\textbf{Yenisu?}}). That industry includes automotive, textile and ready-made clothing sectors and it can be easily said that Turkey is still an industrializing country even though mining and fuels exports has increased about 13.3 times. Eventually, this cause-and-effect relationship will be valid for the other countries.
+In this case, the determinants like new destinations, food safety issue and economic growth of a country can be counted as forceful factors for the heterogeneity of goods that exported. Regarding these factors, similarities between groups of countries in each status has been revealed through our data set.
+
+data \textless-
+
+\newpage
+
+\hypertarget{references}{%
+\section{References}\label{references}}
+
+\hypertarget{refs}{}
+\begin{CSLReferences}{0}{0}
+\end{CSLReferences}
+
+\end{document}
